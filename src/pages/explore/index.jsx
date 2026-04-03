@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BookOpen } from "lucide-react";
+import { themes } from "../../utils/theme";
+import { useSelector } from "react-redux";
 
 const sections = [
     {
@@ -67,8 +69,11 @@ const sections = [
 ];
 
 function Explore() {
+
+    const theme = useSelector((state) => state.theme.theme);
+
     return (
-        <div className="min-h-screen px-6 py-16 bg-gradient-to-r from-black via-gray-600 to-black text-white">
+        <div className={`min-h-screen px-6 py-16 text-white ${themes[theme]}`}>
 
             {/* 🔍 Title */}
             <motion.h1

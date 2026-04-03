@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="py-12 px-6 text-center">
 
                 {/* 📜 Logo / Name */}
-                <h2 className="text-2xl font-bold mb-4">📜 Illakiyam</h2>
+                <h2 className="text-2xl font-bold mb-4">📜 இலக்கியம்</h2>
 
                 {/* 🌐 Social Icons */}
                 <div className="flex justify-center gap-6 mb-6 text-2xl">
@@ -76,7 +76,7 @@ const Footer = () => {
 
                 {/* ©️ Copyright */}
                 <p className="text-sm text-white/70 mt-1">
-                    © {new Date().getFullYear()} Illakiyam. All rights reserved.
+                    © {new Date().getFullYear()} இலக்கியம். All rights reserved.
                 </p>
             </div>
 

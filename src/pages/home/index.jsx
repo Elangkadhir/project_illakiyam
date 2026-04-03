@@ -9,10 +9,15 @@ import {
     Zap,
 } from "lucide-react";
 import Footer from "../../shared/Footer";
+import { themes } from "../../utils/theme";
+import { useSelector } from "react-redux";
 
 function Home() {
+    const theme = useSelector((state) => state.theme.theme);
+
     return (
-        <div className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white">
+        <div className={`min-h-screen ${themes[theme]} text-white`}>
+
 
             {/* 🌈 Hero Section */}
             <section className="flex flex-col items-center justify-center text-center px-6 py-24">
@@ -21,7 +26,7 @@ function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-4xl md:text-6xl font-bold"
                 >
-                    📜 Project Illakiyam
+                    📜 Project இலக்கியம்
                 </motion.h1>
 
                 <motion.p
@@ -112,7 +117,7 @@ function Home() {
                 </div>
             </section>
 
-           
+
             <Footer />
         </div>
     );
