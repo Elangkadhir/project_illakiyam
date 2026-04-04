@@ -16,7 +16,7 @@ function Home() {
     const theme = useSelector((state) => state.theme.theme);
 
     return (
-        <div className={`min-h-screen ${themes[theme]} text-white`}>
+        <div className={`min-h-screen ${themes[theme]}  transition-colors duration-500`}>
 
 
             {/* 🌈 Hero Section */}
@@ -33,7 +33,7 @@ function Home() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="mt-6 max-w-2xl text-lg text-white/80"
+                    className="mt-6 max-w-2xl text-lg "
                 >
                     Experience ancient Tamil literature in a modern, colorful and immersive digital world.
                 </motion.p>
@@ -70,8 +70,8 @@ function Home() {
                             transition={{ delay: index * 0.1 }}
                             className="p-6 rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl"
                         >
-                            <div className="mb-4 text-white">{item.icon}</div>
-                            <p className="text-white/90">{item.text}</p>
+                            <div className="mb-4 ">{item.icon}</div>
+                            <p className="">{item.text}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -91,7 +91,7 @@ function Home() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="max-w-3xl mx-auto text-lg text-white/80"
+                    className="max-w-3xl mx-auto text-lg "
                 >
                     To preserve Tamil literature and present it in a visually engaging,
                     modern format for the next generation.

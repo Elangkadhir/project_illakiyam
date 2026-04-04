@@ -8,7 +8,7 @@ function OurGoal() {
     const theme = useSelector((state) => state.theme.theme);
 
     return (
-        <div className={`min-h-screen py-6 px-12 ${themes[theme]} text-white`}>
+        <div className={`min-h-screen py-6 px-12 ${themes[theme]} `}>
             {/* 🎯 தலைப்பு */}
             <motion.h1
                 initial={{ opacity: 0, y: -30 }}
@@ -28,7 +28,7 @@ function OurGoal() {
                     <Heart /> தமிழ் மீது அன்பு
                 </h2>
 
-                <p className="text-lg text-white/90 leading-relaxed">
+                <p className="text-lg  leading-relaxed">
                     தமிழ் என்பது ஒரு மொழி மட்டும் அல்ல, அது ஒரு உணர்வு.
                     இந்த இலக்கியம் திட்டம் என் தமிழ் மீதான ஆழ்ந்த பற்றின் வெளிப்பாடு.
                     சங்க இலக்கியங்கள் முதல் திருக்குறள் வரை,
@@ -48,7 +48,7 @@ function OurGoal() {
                 >
                     <BookOpen className="mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">எளிதான அணுகல்</h3>
-                    <p className="text-white/80 text-sm">
+                    <p className=" text-sm">
                         அனைவரும் எளிதாக தமிழ் இலக்கியங்களை படிக்கக்கூடிய ஒரு தளம்.
                     </p>
                 </motion.div>
@@ -62,7 +62,7 @@ function OurGoal() {
                 >
                     <Globe className="mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">உலகளாவிய பரவல்</h3>
-                    <p className="text-white/80 text-sm">
+                    <p className=" text-sm">
                         உலகம் முழுவதும் உள்ளவர்களுக்கு தமிழ் இலக்கியத்தை கொண்டு செல்லுதல்.
                     </p>
                 </motion.div>
@@ -76,7 +76,7 @@ function OurGoal() {
                 >
                     <Heart className="mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">இலவசம் & பயனர் நட்பு</h3>
-                    <p className="text-white/80 text-sm">
+                    <p className=" text-sm">
                         அனைவருக்கும் இலவசமாக, எளிதாக பயன்படுத்தக்கூடிய அனுபவம்.
                     </p>
                 </motion.div>
@@ -89,7 +89,7 @@ function OurGoal() {
                 whileInView={{ opacity: 1 }}
                 className="max-w-3xl mx-auto text-center"
             >
-                <p className="text-xl text-white/90 leading-relaxed">
+                <p className="text-xl  leading-relaxed">
                     இந்த இலக்கியம்ஒரு சாதாரண பயன்பாடு அல்ல,
                     இது தமிழ் மொழியின் அழகையும் அறிவையும்
                     அடுத்த தலைமுறைக்கு கொண்டு செல்லும் ஒரு முயற்சி.

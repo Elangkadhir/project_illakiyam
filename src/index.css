@@ -4,3 +4,17 @@
 ::-webkit-scrollbar {
   display: none;
 }
+@keyframes bomb {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(60);
+    opacity: 1;
+  }
+}
+
+.animate-bomb {
+  animation: bomb 0.6s ease-out forwards;
+}

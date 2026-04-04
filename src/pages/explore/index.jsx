@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { BookOpen } from "lucide-react";
 import { themes } from "../../utils/theme";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import APPROUTES from "../../routes/app_Routes";
 
 const sections = [
     {
@@ -68,12 +70,18 @@ const sections = [
     },
 ];
 
-function Explore() {
 
+
+function Explore() {
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        navigate(APPROUTES.THIRUKURAL)
+    }
     const theme = useSelector((state) => state.theme.theme);
 
     return (
-        <div className={`min-h-screen px-6 py-16 text-white ${themes[theme]}`}>
+        <div className={`min-h-screen px-6 py-16  ${themes[theme]}`}>
 
             {/* 🔍 Title */}
             <motion.h1
@@ -111,12 +119,12 @@ function Explore() {
                                     transition={{ delay: index * 0.1 }}
                                     className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg cursor-pointer"
                                 >
-                                    <div className="flex items-center gap-3 mb-3">
+                                    <div className="flex items-center gap-3 mb-3" onClick={handleNavigate}>
                                         <BookOpen />
                                         <h3 className="text-lg font-semibold">{book}</h3>
                                     </div>
 
-                                    <p className="text-sm text-white/80">
+                                    <p className="text-sm ">
                                         Click to explore this literary work
                                     </p>
                                 </motion.div>

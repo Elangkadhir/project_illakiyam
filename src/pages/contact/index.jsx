@@ -13,7 +13,7 @@ function Contact() {
     const theme = useSelector((state) => state.theme.theme);
 
     return (
-        <div className={`min-h-screen px-6 py-16 ${themes[theme]} text-white`}>
+        <div className={`min-h-screen px-6 py-16 ${themes[theme]} `}>
 
             {/* 🎯 Title */}
             <motion.h1
@@ -49,7 +49,7 @@ function Contact() {
                     💡 Calling Enthusiastic Developers
                 </h2>
 
-                <p className="text-lg text-white/90">
+                <p className="text-lg ">
                     If you are passionate about Tamil, open-source, and building meaningful
                     digital experiences, you are welcome to contribute to this project.
                     Let’s preserve and modernize Tamil literature together 🚀

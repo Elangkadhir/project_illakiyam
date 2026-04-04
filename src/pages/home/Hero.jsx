@@ -19,7 +19,7 @@ function Hero() {
             {/* 📜 Text Layer */}
             <motion.div
                 style={{ y: text }}
-                className="relative z-10 flex flex-col items-center justify-center h-full text-white"
+                className="relative z-10 flex flex-col items-center justify-center h-full "
             >
                 <h1 className="text-6xl font-bold">
                     தமிழ்

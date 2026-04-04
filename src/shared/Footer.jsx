@@ -7,17 +7,17 @@ import {
     FaTwitter,
 } from "react-icons/fa";
 import { ArrowUp } from "lucide-react";
+import { themes } from "../utils/theme";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+        window.scrollTo(0, 0);
     };
+    const theme = useSelector((state) => state.theme.theme);
 
     return (
-        <footer className="relative mt-20 bg-gradient-to-r from-black via-gray-600 to-black text-white rounded-t-2xl">
+        <footer className={`relative mt-20 ${themes[theme]} rounded-t-2xl ease-in-out`}>
 
             {/* 🌟 Content */}
             <div className="py-12 px-6 text-center">
@@ -67,7 +67,7 @@ const Footer = () => {
                 </div>
 
                 {/* 👤 Creator */}
-                <p className="text-sm text-white/90">
+                <p className="text-sm ">
                     Created by{" "}
                     <span className="font-semibold">
                         V. Elangkadhir Nathan
@@ -75,7 +75,7 @@ const Footer = () => {
                 </p>
 
                 {/* ©️ Copyright */}
-                <p className="text-sm text-white/70 mt-1">
+                <p className="text-sm  mt-1">
                     © {new Date().getFullYear()} இலக்கியம். All rights reserved.
                 </p>
             </div>
@@ -85,7 +85,7 @@ const Footer = () => {
                 onClick={scrollToTop}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
-                className="absolute right-6 bottom-6 p-3 rounded-full bg-white text-purple-600 shadow-xl"
+                className="absolute right-6 bottom-6 p-3 rounded-full  text-purple-600 shadow-xl"
             >
                 <ArrowUp />
             </motion.button>
