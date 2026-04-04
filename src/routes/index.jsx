@@ -22,7 +22,7 @@ const AthikaaramDetail = lazy(() => import("../pages/thirukural/AthikaaramDetail
 const PageRouting = () => {
     return (
         <div>
-            <Router>
+            <Router basename={import.meta.env.VITE_BASE_URL}>
                 <Toaster position="top-right" richColors offset={80} />
 
                 <div className="flex flex-col h-screen overflow-hidden">
@@ -30,7 +30,7 @@ const PageRouting = () => {
                     <div className="flex-1 overflow-y-auto scrollHide">
                         <Suspense fallback={<Loader loading={true} text="loading...." />}>
                             <Routes>
-                                <Route path="/" element={<Home />} />
+                                <Route path={APPROUTES.HOME} element={<Home />} />
                                 <Route path={APPROUTES.PROFILE} element={<Profile />} />
                                 <Route path={APPROUTES.EXPLORE} element={<Explore />} />
                                 <Route path={APPROUTES.CONTACT} element={<Contact />} />
