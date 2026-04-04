@@ -1,0 +1,1 @@
+import{n as e,t}from"./jsx-runtime-C7M7YA1l.js";e();var n=t();function r(){return(0,n.jsx)(`div`,{children:`Profile`})}export{r as default};
