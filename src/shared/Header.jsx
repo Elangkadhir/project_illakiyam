@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Home, Info, Phone, Share2 } from "lucide-react";
+import { ChevronDown, Home, Info, Phone, Share2, Scroll } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../Redux/slice/themeSlice";
 import { themes } from "../utils/theme";
@@ -33,8 +33,8 @@ const Header = () => {
                     onClick={() => navigate("/")}
                     className="flex items-center gap-2 cursor-pointer"
                 >
-                    <span className="text-2xl font-bold ">
-                        📜 இலக்கியம்
+                    <span className="flex items-center gap-2 text-2xl font-bold">
+                        <Scroll className="text-purple-600" /> இலக்கியம்
                     </span>
                 </div>
 

@@ -6,7 +6,7 @@ import {
     FaInstagram,
     FaTwitter,
 } from "react-icons/fa";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Scroll } from "lucide-react";
 import { themes } from "../utils/theme";
 import { useSelector } from "react-redux";
 
@@ -23,7 +23,9 @@ const Footer = () => {
             <div className="py-12 px-6 text-center">
 
                 {/* 📜 Logo / Name */}
-                <h2 className="text-2xl font-bold mb-4">📜 இலக்கியம்</h2>
+                <h2 className="flex items-center justify-center gap-2 text-2xl font-bold mb-4">
+                    <Scroll className="text-purple-600" /> இலக்கியம்
+                </h2>
 
                 {/* 🌐 Social Icons */}
                 <div className="flex justify-center gap-6 mb-6 text-2xl">

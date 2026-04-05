@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Library } from "lucide-react";
 import { themes } from "../../utils/theme";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -87,9 +87,9 @@ function Explore() {
             <motion.h1
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl font-bold text-center mb-12"
+                className="flex items-center justify-center gap-3 text-4xl font-bold text-center mb-12"
             >
-                📚 Explore Tamil Literature
+                <Library size={40} className="text-purple-600" /> Explore Tamil Literature
             </motion.h1>
 
             {/* 📖 Sections */}

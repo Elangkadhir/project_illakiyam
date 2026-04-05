@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Heart, BookOpen, Globe } from "lucide-react";
+import { Heart, BookOpen, Globe, Target } from "lucide-react";
 import { themes } from "../../utils/theme";
 import { useSelector } from "react-redux";
 
@@ -13,9 +13,9 @@ function OurGoal() {
             <motion.h1
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl font-bold text-center mb-12"
+                className="flex items-center justify-center gap-3 text-4xl font-bold text-center mb-12"
             >
-                🎯 எங்கள் நோக்கம்
+                <Target size={40} className="text-red-500" /> எங்கள் நோக்கம்
             </motion.h1>
 
             {/* ❤️ தமிழ் பற்றிய பற்று */}
@@ -93,7 +93,7 @@ function OurGoal() {
                     இந்த இலக்கியம்ஒரு சாதாரண பயன்பாடு அல்ல,
                     இது தமிழ் மொழியின் அழகையும் அறிவையும்
                     அடுத்த தலைமுறைக்கு கொண்டு செல்லும் ஒரு முயற்சி.
-                    உங்கள் ஆதரவு இந்த பயணத்தை இன்னும் உயரத்திற்கு கொண்டு செல்லும் ❤️
+                    உங்கள் ஆதரவு இந்த பயணத்தை இன்னும் உயரத்திற்கு கொண்டு செல்லும் <Heart size={18} className="inline-block text-red-500 fill-red-500 animate-pulse" />
                 </p>
             </motion.div>
 

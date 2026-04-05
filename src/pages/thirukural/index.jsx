@@ -1,12 +1,13 @@
 import { Outlet, NavLink } from "react-router-dom";
 import { themes } from "../../utils/theme";
 import { useSelector } from "react-redux";
+import { BookOpen, Scroll, Library, Gem } from "lucide-react";
 
 function Thirukural() {
     const navItems = [
-        { name: "📖 Kural", path: "kural" },
-        { name: "📜 Paal", path: "paal" },
-        { name: "📚 Athikaaram", path: "athikaaram" },
+        { name: "Kural", icon: <BookOpen size={18} />, path: "kural" },
+        { name: "Paal", icon: <Scroll size={18} />, path: "paal" },
+        { name: "Athikaaram", icon: <Library size={18} />, path: "athikaaram" },
     ];
 
     const theme = useSelector((state) => state.theme.theme);
@@ -15,12 +16,15 @@ function Thirukural() {
         <div className={`min-h-screen ${themes[theme]} transition-colors duration-500 p-6`}>
 
             {/* Header */}
-            <h1 className="text-2xl font-bold mb-6 text-center">
-                📜 திருக்குறள்
+            <h1 className="flex items-center justify-center gap-3 text-2xl font-bold mb-6 text-center">
+                <Scroll className="text-purple-600" /> திருக்குறள்
             </h1>
 
             {/* 💎 Floating Cards Navigation */}
             <div className="flex justify-center gap-6 mb-10 flex-wrap">
+                <div className="w-full flex justify-center mb-4">
+                    <Gem className="text-blue-400 animate-pulse" />
+                </div>
 
                 {navItems.map((item, index) => (
                     <NavLink
@@ -35,8 +39,8 @@ function Thirukural() {
                             }`
                         }
                     >
-                        <span className="block text-center font-semibold">
-                            {item.name}
+                        <span className="flex items-center gap-2 justify-center font-semibold">
+                            {item.icon} {item.name}
                         </span>
                     </NavLink>
                 ))}

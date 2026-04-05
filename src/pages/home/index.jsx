@@ -7,6 +7,10 @@ import {
     Search,
     Smartphone,
     Zap,
+    Scroll,
+    Sparkles,
+    Target,
+    Wrench,
 } from "lucide-react";
 import Footer from "../../shared/Footer";
 import { themes } from "../../utils/theme";
@@ -24,9 +28,9 @@ function Home() {
                 <motion.h1
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-4xl md:text-6xl font-bold"
+                    className="flex items-center gap-3 text-4xl md:text-6xl font-bold"
                 >
-                    📜 Project இலக்கியம்
+                    <Scroll size={48} className="text-purple-600" /> Project இலக்கியம்
                 </motion.h1>
 
                 <motion.p
@@ -49,8 +53,8 @@ function Home() {
 
             {/* ✨ Features */}
             <section className="px-6 py-20">
-                <h2 className="text-3xl font-semibold text-center mb-12">
-                    ✨ Features
+                <h2 className="flex items-center justify-center gap-3 text-3xl font-semibold text-center mb-12">
+                    <Sparkles className="text-yellow-400" /> Features
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -82,9 +86,9 @@ function Home() {
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className="text-3xl font-semibold mb-6"
+                    className="flex items-center justify-center gap-3 text-3xl font-semibold mb-6"
                 >
-                    🎯 Our Goal
+                    <Target className="text-red-500" /> Our Goal
                 </motion.h2>
 
                 <motion.p
@@ -100,7 +104,9 @@ function Home() {
 
             {/* 🛠 Tech Stack */}
             <section className="px-6 py-20 text-center">
-                <h2 className="text-3xl font-semibold mb-10">🛠 Tech Stack</h2>
+                <h2 className="flex items-center justify-center gap-3 text-3xl font-semibold mb-10">
+                    <Wrench className="text-blue-500" /> Tech Stack
+                </h2>
 
                 <div className="flex flex-wrap justify-center gap-4">
                     {["React", "Vite", "Tailwind", "Framer Motion", "JSON"].map(

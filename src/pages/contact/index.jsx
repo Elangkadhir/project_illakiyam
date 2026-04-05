@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { themes } from "../../utils/theme";
 import { useSelector } from "react-redux";
+import { Handshake, Rocket, Lightbulb, Mail, } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 const quotes = [
     "யாதும் ஊரே யாவரும் கேளிர்",
@@ -19,9 +21,9 @@ function Contact() {
             <motion.h1
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl font-bold text-center mb-12"
+                className="flex items-center justify-center gap-3 text-4xl font-bold text-center mb-12"
             >
-                🤝 Join இலக்கியம்
+                <Handshake size={40} className="text-purple-600" /> Join இலக்கியம்
             </motion.h1>
 
             {/* 📜 Quotes Section */}
@@ -45,14 +47,14 @@ function Contact() {
                 whileInView={{ opacity: 1 }}
                 className="max-w-3xl mx-auto text-center mb-12"
             >
-                <h2 className="text-2xl font-semibold mb-4">
-                    💡 Calling Enthusiastic Developers
+                <h2 className="flex items-center justify-center gap-3 text-2xl font-semibold mb-4">
+                    <Lightbulb className="text-yellow-400" /> Calling Enthusiastic Developers
                 </h2>
 
                 <p className="text-lg ">
                     If you are passionate about Tamil, open-source, and building meaningful
                     digital experiences, you are welcome to contribute to this project.
-                    Let’s preserve and modernize Tamil literature together 🚀
+                    Let’s preserve and modernize Tamil literature together <Rocket size={18} className="inline-block text-orange-500 animate-bounce" />
                 </p>
             </motion.div>
 
@@ -64,7 +66,7 @@ function Contact() {
                     href="mailto:elangkdhirnathan12@gmail.com"
                     className="flex items-center gap-2 px-6 py-3 bg-white text-purple-600 rounded-xl font-semibold shadow-lg"
                 >
-                    Email Me
+                    <Mail size={18} /> Email Me
                 </motion.a>
 
                 <motion.a
@@ -73,7 +75,8 @@ function Contact() {
                     target="_blank"
                     className="flex items-center gap-2 px-6 py-3 bg-black/30 backdrop-blur-md border border-white/20 rounded-xl"
                 >
-                    Contribute on GitHub
+                    <FaGithub
+                        size={18} /> Contribute on GitHub
                 </motion.a>
 
             </div>
